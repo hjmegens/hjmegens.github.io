@@ -6,10 +6,10 @@
 # --- Required options --- #
 
 # Name of website
-title: My Website
+title: Vintage computer adventures
 
 # Your name to show in the footer
-author: Some Person
+author: HJ Megens
 
 # --- List of links in the navigation bar --- #
 
@@ -40,11 +40,11 @@ round-avatar: true
 social-network-links:
   email: "someone@example.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
-  patreon: DeanAttali
-  youtube: c/daattali
+#  facebook: 
+  github: hjmegens
+  twitter: BioHJM
+#  patreon: yournae
+#  youtube: c/yourname
 #  medium: yourname
 #  reddit: yourname
 #  linkedin: daattali
@@ -65,7 +65,7 @@ social-network-links:
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: This website is a virtual proof that I'm awesome
+rss-description: some_rss_description
 
 # --- General options --- #
 
@@ -210,7 +210,7 @@ date_format: "%B %-d, %Y"
 # --- You don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone: "America/Toronto"
+timezone: "Europe/Amsterdam"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
