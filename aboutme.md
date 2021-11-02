@@ -1,10 +1,10 @@
 ---
 layout: page
 title: About me
-subtitle: somesubtitle
+subtitle:
 ---
 
-something about me
+about me
 
 ### My story
 
