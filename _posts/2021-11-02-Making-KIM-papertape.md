@@ -4,7 +4,7 @@ There are a number of ways to get data or code into the KIM-1/PAL-1. The one use
 
 Nowadays, serial connections are easy and cheap. A terminal emulation program on your Windows, Mac, or Linux computer, and a cheap serial RS232-to-USB cable is all that is required. That means that serial input and output are today the preferred option for interfacing with your vintage KIM-1 or [new-kid-on-the-block PAL-1](https://www.tindie.com/products/tkoak/pal-1-a-mos-6502-powered-computer-kit/). 
 
-Serial input, such as loading of a program, traditionally was done from papertape, e.g. on a Teletype ASR33. The teletype would send the information as ASCII-encoded representations of each half-byte, ie. characters 0-F, for hexadecimal. The KIM-1 manual, appendix F, provides a succinct description of the papertape format.
+Serial input, such as loading of a program, traditionally was done from papertape, e.g. on a Teletype ASR33. The teletype would send the information as ASCII-encoded representations of each half-byte, ie. characters 0-F, for hexadecimal. The [KIM-1 manual](http://retro.hansotten.nl/6502-sbc/kim-1-manuals-and-software/kim-1-manuals-and-software/), appendix F, provides a succinct description of the papertape format.
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/Appendix_F.png?raw=true" alt="fig1" style="width: 600px;"/>
 
