@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About me
-subtitle:
+title: 
+subtitle: About me
 ---
 
 I don't create beautiful code. I just want to understand how stuff works. Old computers are my way to understand the fundamentals of computer architecture with the added advantage of nostalgia. 
