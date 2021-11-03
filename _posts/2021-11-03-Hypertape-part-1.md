@@ -61,7 +61,7 @@ Zooming in, it becomes more clear how the ratio of high/low frequency interval d
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/hypertape/hyper_KIMposer_4.png?raw=true" alt="fig1" style="width: 500px;"/>
 
-But probably even more problematic is that some phase transitions result in bouncing of the high signal. This can't be right and certainly is enough to make the hypertape fail
+But probably even more problematic is that some phase transitions result in bouncing of the high signal. This can't be right and certainly is enough to make the hypertape fail.
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/hypertape/hyper_KIMposer_3.png?raw=true" alt="fig1" style="width: 500px;"/>
 
