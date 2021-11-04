@@ -8,9 +8,9 @@ So as we set a time for me to pick up the terminal (more on that machine in a la
 
 Roland sent me some links to study:
 
-* http://www.pdp-11.nl/ba11-boxes/ba11va/ba11va-info.html
-* http://www.diane-neisius.de/pdp11/index_E.html#base
-* http://avitech.com.au/?page_id=1657
+* [Minimal system from Henk Gooijen's webstie](http://www.pdp-11.nl/ba11-boxes/ba11va/ba11va-info.html)
+* [Minimal PDP-11 system from Diane Neisius' site](http://www.diane-neisius.de/pdp11/index_E.html#base)
+* [Malcolm's minimal PDP-11 system](http://avitech.com.au/?page_id=1657)
 
 It hit me that those minimalistic setups were in a very real sense very similar in modularity to the RC2014 I had already some experience with. Minimalistic it would be, certainly, no fancy blinkenlights and cool-looking frontpanel with switches. But the open, minimalistic design immediately struck a chord because I really like single board (or modular) computers. But: with NO meaningful experience, could I really pull this off? Roland convinced me that I could. 
 
