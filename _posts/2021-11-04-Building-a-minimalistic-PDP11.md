@@ -53,7 +53,7 @@ Could it really be? Was the PDP-11 alive? I started the serial connection....
 
 ODT!!!!!
 
-The ODT is the [Online Debugging Tool](https://en.wikipedia.org/wiki/On-line_Debugging_Tool)) found in later PDP-11 implementations that did not have a front-panel anymore. 
+The ODT is the [Online Debugging Tool](https://en.wikipedia.org/wiki/On-line_Debugging_Tool) found in later PDP-11 implementations that did not have a front-panel anymore. 
 
 So, the machine was alive, and talking to me! 
 Without RAM though, I couldn't load or access any memory locations.
