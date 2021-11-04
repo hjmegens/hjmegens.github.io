@@ -8,7 +8,7 @@ The audio tape format is well described in the [KIM-1 manual](http://retro.hanso
 
 It is actually fairly easy to recreate in code, but that will be the topic for another post. For now I was interested to see if hypertape would work on the PAL-1. I haven't yet implemented hypertape format in my program that converts binary to audio (.wav). So I used the KIMposer website to create some hypertape audio files. But loading on the PAL-1 failed. So, what is going on?
 
-The KIM-1 audio input can be checked by [probing the PPL pin with a scope](http://retro.hansotten.nl/6502-sbc/kim-1-manuals-and-software/kim-1-articles/reading-tapes-from-other-kim-1/). The PAL-1 has a similar pin out (acutally, exactly the same if you study the circuit diagrams, it's just called 'cassette'). 
+The KIM-1 audio input can be checked by [probing the PLL pin with a scope](http://retro.hansotten.nl/6502-sbc/kim-1-manuals-and-software/kim-1-articles/reading-tapes-from-other-kim-1/). The PAL-1 has a similar pin out (acutally, exactly the same if you study the circuit diagrams, it's just called 'cassette'). 
 
 So, what does the input look like for a 'normal' tape format, and how is that converted by the PAL-1 cassette interface? 
 
