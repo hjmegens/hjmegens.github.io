@@ -28,7 +28,7 @@ But Roland had no spare Qbus backplanes, so that was going to be the next hunt (
 
 Now, I should be good to go: I had a bunch of boards, a rack, and had purchased a modern, stable AT PSU so as not to blow up my precious vintage boards due to a faulty power supply. Here's a picture of my collection of PDP-11 stuff at the time - note the PiDP-11 for scale!
 
-<img src="figures/Kratje/GetGoing.jpeg?raw=true" alt="fig1" style="width: 400px;"/>
+<img src="figures/Kratje/GetGoing.jpeg" alt="fig1" style="width: 400px;"/>
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/Kratje/GetGoing.jpeg?raw=true" alt="fig1" style="width: 400px;"/>
 
