@@ -1,11 +1,8 @@
-
 ---
 layout: post
 title: Building a minimalistic PDP-11
 tags: [PDP-11, Qbus, electronics]
 ---
-
-# Building a minimalistic PDP-11
 
 *This post is based on a series of posts at the Dutch Vintage Computer Collectors Mailing List (CVML), between October 16 and December 17, 2020*
 
