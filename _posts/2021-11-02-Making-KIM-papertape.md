@@ -4,8 +4,9 @@ title: Making KIM-1 papertape
 tags: [PAL-1, KIM-1, papertape, 6502]
 ---
 
+This post details what I've learned from converting binary code to KIM-1 papertape format. It was a fun exercise in turning specifications into Python code. 
 
-### Making KIM-1 papertape ###
+## Making KIM-1 papertape
 
 There are a number of ways to get data or code into the KIM-1/PAL-1. The one used most often by KIM-1 owners 'back in the day' must have been the audio tape way. The alternative option - connecting from a serial device such as a teletype of 'glass terminal' surely must have been outside of the budget of most KIM users. 
 
