@@ -28,6 +28,8 @@ But Roland had no spare Qbus backplanes, so that was going to be the next hunt (
 
 Now, I should be good to go: I had a bunch of boards, a rack, and had purchased a modern, stable AT PSU so as not to blow up my precious vintage boards due to a faulty power supply. Here's a picture of my collection of PDP-11 stuff at the time - note the PiDP-11 for scale!
 
+<img src="figures/Kratje/GetGoing.jpeg?raw=true" alt="fig1" style="width: 400px;"/>
+
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/Kratje/GetGoing.jpeg?raw=true" alt="fig1" style="width: 400px;"/>
 
 However, I really, really didn't know anything about PDP-11 computers, and overlooked one very important aspect: the control of powerup, the Line Time Clock, and things like halt and reset signals. Remember, this would be a completely bare setup, no front panel of any sort, and not even an original PSU. Fortunately, it was pointed out to me by several people, that in my blind enthusiasm I forgot to study a few things. The site of [Malcolm](http://avitech.com.au/?page_id=1657) offered a fairly straightforward solution: use an Arduino to control the PSU, provide a LTC, provide the power good signal to the PDP-11 CPU, deal with the halt signaling, and report some basic signals using LEDs. 
