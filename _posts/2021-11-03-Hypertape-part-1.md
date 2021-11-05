@@ -5,6 +5,10 @@ title: Hypertape, part 1
 tags: [PAL-1, KIM-1, audiotape, 6502, historical software]
 ---
 
+Making a Python script to convert audio tape to binary code for my PAL-1 seemed somewhat useful, but especially instructive as since I wanted to learn more on how that worked. Showing off a working prototype at the PAL-1 forum I got asked: but can it do hypertape. Oops... no. So, how does that hypertape work? Back to the drawing board.
+
+## Hypertape, part 1
+
 'Back in the day', when serial interfacing using a teletype or glass terminal was usually way out of reach for the average [KIM-1](https://en.wikipedia.org/wiki/KIM-1) enthusiast, loading programs was usually done using the audio tape interface. Taperecorders were reasonably priced and many people would already own one for recording and playing speech and music. 
 
 The audio tape format is well described in the [KIM-1 manual](http://retro.hansotten.nl/uploads/files/MCS6500%20Hardware%20Manual%20jan%201976%20second%20edition.pdf). 

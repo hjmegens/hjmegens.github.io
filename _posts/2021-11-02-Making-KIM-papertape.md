@@ -4,7 +4,7 @@ title: Making KIM-1 papertape
 tags: [PAL-1, KIM-1, papertape, 6502]
 ---
 
-This post details what I've learned from converting binary code to KIM-1 papertape format. It was a fun exercise in turning specifications into Python code. 
+This post details what I've learned from converting binary code to KIM-1 papertape format. It was a fun exercise in turning format specifications into Python. 
 
 ## Making KIM-1 papertape
 

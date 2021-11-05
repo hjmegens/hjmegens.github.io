@@ -1,8 +1,12 @@
 ---
 layout: post
-title: Building a minimalistic PDP-11
+title: A minimalistic PDP-11
 tags: [PDP-11, Qbus, electronics]
 ---
+
+Owning and maintaining '70s architecture minicomputers has many challenges. Of course, emulation of these old machines has many advantages, but there's just no substitute for the real deal. This post details a few steps creating a minimalistic, but working!, PDP-11 from vintage hardware.  
+
+## Building a minimalistic PDP-11
 
 *This post is based on a series of posts at the Dutch Vintage Computer Collectors Mailing List (CVML), between October 16 and December 17, 2020*
 

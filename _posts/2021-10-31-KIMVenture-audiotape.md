@@ -1,9 +1,13 @@
 
 ---
 layout: post
-title: KIM-Venture, analysis of audiotape
+title: KIM-Venture audiotape
 tags: [PAL-1, KIM-1, audiotape-to-binary, 6502, historical software]
 ---
+
+Onccasionally software emerges that was lost for decades. Recently the KIM-1 community got interested in a few games created by Bob Leedom in the late '70s. These are interesting examples of how much you can cram into just over one kilobyte. I got especially interested in the audio format which allowed me to optimize my program that converts the KIM-1 audio format to binary code.
+
+## KIM-Venture, analysis of audiotape
 
 <img src="https://github.com/hjmegens/PAL1_tools/blob/main/program_sources/kimventure_docs/misc_figures/kimventure.jpeg?raw=true" alt="fig1" style="width: 500px;"/>
 
