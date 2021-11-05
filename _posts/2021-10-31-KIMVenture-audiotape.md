@@ -1,3 +1,10 @@
+
+---
+layout: post
+title: KIM-Venture, analysis of audiotape
+tags: [PAL-1, KIM-1, audiotape-to-binary, 6502, historical software]
+---
+
 <img src="https://github.com/hjmegens/PAL1_tools/blob/main/program_sources/kimventure_docs/misc_figures/kimventure.jpeg?raw=true" alt="fig1" style="width: 500px;"/>
 
 ### KIM-Venture: analysis of audio tape ###

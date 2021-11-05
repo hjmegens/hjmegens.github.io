@@ -1,3 +1,10 @@
+
+---
+layout: post
+title: Hypertape, part 1
+tags: [PAL-1, KIM-1, audiotape, 6502, historical software]
+---
+
 # Hypertape, part 1
 
 'Back in the day', when serial interfacing using a teletype or glass terminal was usually way out of reach for the average [KIM-1](https://en.wikipedia.org/wiki/KIM-1) enthusiast, loading programs was usually done using the audio tape interface. Taperecorders were reasonably priced and many people would already own one for recording and playing speech and music. 
