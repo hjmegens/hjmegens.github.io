@@ -71,7 +71,7 @@ loop:
   jmp loop          ; and back to loop
   
 ```
-This program works alright but when I start it on my PAL-1 all I notice is a slight dimming of the LEDs. When starting the PAL-1 location at 1701 often is 0, keeping all output pins in a high state. So the dimming means something happens. And it is clear what it is that is happening. While in my Ben Eater 6502 computer I have the option to use a very slow clock (clock speeds from about 1hz to 500hz, and manual), the PAL-1 clock runs at 1Mhz. Everything just happens too fast to see anything, with the leds being 'on' about half the time, hence the dimming.
+This program works alright but when I start it on my PAL-1 all I notice is a slight dimming of the LEDs. When starting the PAL-1 location at 1701 often is 0, keeping all output pins in a high state. So the dimming means something happens. And it is clear what it is that is happening. While in my Ben Eater 6502 computer I have the option to use a very slow clock (clock speeds from about 1hz to 500hz, and manual), the PAL-1 clock runs at 1Mhz. Everything just happens too fast to see anything, with the LEDs being 'on' about half the time, hence the dimming.
 
 With no option to slow the clock down, there is of course the option of single stepping but a more interesting solution would be to let the PAL-1 sleep for 1 second between transitions of the LED pattern. But how to do that? My first thought was to have half a million NOPs (for No Operation instruction), as each of these takes two clock cycles to complete which would keep the PAL-1 busy for a second. But that seemed rather complicated to implement. Then it occurred to me that of course, the RIOT provides timer functions, which I wanted to research anyway. Solving my problem by using the RIOT timer function seemed complicated, but doable. It requires writing and reading to and from specific addresses in the timer registers, but I really didn't understand how that would work. 
 
@@ -81,7 +81,7 @@ Maybe I needed an example to work from. When I completed the RIOT expansion boar
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/RIOT/FBoK_title.png?raw=true" alt="fig1" style="width: 400px;"/>
 
-You can turn your KIM-1 into a stopwatch. The author even details he made the intervals precise to 1 second up to 50 microseconds. And, crucially, it makes use of the same (R)RIOT I wanted to use for the I/O, so maybe I could use some tricks to achieve two learning goals in one go: using the RIOT for I/O **AND** timer functions. 
+You can turn your KIM-1 into a stopwatch. The author even details he made the intervals precise to 1 second up to 50 microseconds. And, crucially, it makes use of the same (R)RIOT I wanted to use for the I/O, so maybe I could use some tricks from the Timer program to achieve two learning goals in one go: using the RIOT for I/O **AND** timer functions. 
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/RIOT/Timer1.png?raw=true" alt="fig1" style="width: 400px;"/>
 
