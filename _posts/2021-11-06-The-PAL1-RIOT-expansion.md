@@ -6,7 +6,7 @@ tags: [KIM-1, PAL-1, RRIOT, RIOT, I/O programming, timer functions]
 
 The 8-bitters of the mid-'70s came with a bunch of general and specialized support chips. The KIM-1 used the RRIOT. In this post I'm describing my first steps in programming the PAL-1 6532 RIOT I/O and timer functions.
 
-## The PAL-1 RIOT expansion
+## Programming the PAL-1 RIOT expansion
 
 One of the interesting aspects of the first generation of microprocessors is that they generally were introduced together with a bunch of 'support chips'. For instance, for the very first microprocessor, the [Intel 4004](https://en.wikipedia.org/wiki/Intel_4004), there were a number of [support chips](https://en.wikipedia.org/wiki/Intel_4004#Support_chips) dedicated to extend the capabilities of the microprocessor.
 
