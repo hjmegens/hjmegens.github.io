@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Programming the PAL-1 RIOT expansion
+title: The PAL-1 RIOT expansion
 tags: [KIM-1, PAL-1, RRIOT, RIOT, I/O programming, timer functions]
 ---
 
