@@ -4,7 +4,7 @@ title: The PAL-1 RIOT expansion
 tags: [6502, KIM-1, PAL-1, RRIOT, RIOT, I/O programming, timer functions]
 ---
 
-The 8-bitters of the mid-'70s came with a bunch of general and specialized support chips. The KIM-1 used the RRIOT. In this post I'm describing my first steps in programming the PAL-1 6532 RIOT I/O and timer functions.
+The 8-bitters of the mid-'70s came with a bunch of general and specialized support chips. The KIM-1 used the 6530 RRIOT. In this post I'm describing my first steps in programming the PAL-1 6532 RIOT I/O and timer functions.
 
 ## Programming the PAL-1 RIOT expansion
 
