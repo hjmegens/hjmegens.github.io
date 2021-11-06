@@ -222,7 +222,7 @@ And...! Success! The LED pattern alternates with a near-exact 1 second interval.
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/RIOT/Photos/20211106_144614.jpg?raw=true" alt="fig1" style="width: 300px;"/>
 
 
-I posted some footage on Twitter.
+[I posted some footage on Twitter](https://twitter.com/BioHJM/status/1457003648979017733?s=20)
 
 This was a nice learning experience, and I'm now set to explore more ways to interface to the real world with my PAL-1. I'm also very interested in exploring timer functions further. 
 
