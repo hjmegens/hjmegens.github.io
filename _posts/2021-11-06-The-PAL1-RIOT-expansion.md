@@ -77,7 +77,7 @@ With no option to slow the clock down, there is of course the option of single s
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/RIOT/KIMtimer_address.png?raw=true" alt="fig1" style="width: 500px;"/>
 
-Maybe I needed an example to work from. When I completed the RIOT expansion board, one of the programs I used to test that it worked was the 'Timer' program from the First Book of KIM (FBoK). 
+Maybe I needed an example to work from. When I completed the RIOT expansion board, one of the programs I used to test that it worked was the 'Timer' program from the [First Book of KIM (FBoK)](http://retro.hansotten.nl/uploads/files/The%20First%20Book%20of%20KIM.pdf). 
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/RIOT/FBoK_title.png?raw=true" alt="fig1" style="width: 400px;"/>
 
