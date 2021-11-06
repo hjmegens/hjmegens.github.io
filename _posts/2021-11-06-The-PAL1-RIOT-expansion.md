@@ -18,7 +18,6 @@ The MOS 6502 saw a similar development of general support chips, including the V
 
 One support chip for the 6502 that is particularly interesting is the [RRIOT (6530)](https://en.wikipedia.org/wiki/MOS_Technology_RRIOT). **RRIOT** stands for **ROM-RAM-I/O-Timer**. This is a rather exact description of the functions encapsulated into this one chip: it provided 2 banks of 8 general input/output pins, had a timer function, and provided a teensy bit of RAM. The RAM was only 64 bytes, but when you are working on a system that only has 1KB of RAM on board, as was the case with the KIM-1, those 64 bytes could come in handy for writing applications (see the story of [KIMVenture](http://retro.hansotten.nl/6502-sbc/kim-1-manuals-and-software/kim-1-software/kim-venture/)).
 
-figures/RIOT/FBoK_title.png
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/RIOT/RRIOT_block_diagram.png?raw=true" alt="fig1" style="width: 500px;"/>
 
 [Figure from KIM-1 manual](http://retro.hansotten.nl/uploads/files/KIM-1_Users_Manual.pdf)
