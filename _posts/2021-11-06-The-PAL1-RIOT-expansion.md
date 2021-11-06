@@ -193,7 +193,7 @@ clk:
   rts               0233:  60
 
 ```
-Subsequently, I converted the binary to a papertape format using my 'virtual papertaper'. The default of that program is accepting the binary as a PRG, i.e., including the start address, but it is versatile enough to also accept a plain binary with the start address provided by the user. 
+Subsequently, I converted the binary to a papertape format using [my 'virtual papertaper'](https://hjmegens.github.io/2021-11-02-Making-KIM-papertape/). The default of that program is accepting the binary as a PRG, i.e., including the start address, but it is versatile enough to also accept a plain binary with the start address provided by the user. 
 
 ```
 
