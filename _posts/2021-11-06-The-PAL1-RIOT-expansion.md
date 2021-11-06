@@ -85,17 +85,17 @@ You can turn your KIM-1 into a stopwatch. The author even details he made the in
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/RIOT/Timer1.png?raw=true" alt="fig1" style="width: 400px;"/>
 
-Studying how the author created a timer taught me it involved writing a value to the timer register (address 1706)), subsequently read it (address 1707) until the timer indicated it counted back to zero. And then doing this 100 times for a total of 1 second. 
+Studying how the author created a timer taught me it involved writing a value to the timer register (address 0x1706)), subsequently read it (address 0x1707) until the timer indicated it counted back to zero. And then doing this 100 times for a total of 1 second. 
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/RIOT/Timer2.png?raw=true" alt="fig1" style="width: 400px;"/>
 
-The interesting value here is 9C. That value is written to address 1706, and, once written, will be decremented by one every 64 clock cycles. If the count is back to zero, reading address 1707 will result in a byte with a '1' on location 7, and if the count is not zero, then reading 1707 will result in a value of zero (i.e. all 8 bits to zero). 
+The interesting value here is 9C (hexadecimal). That value is written to address 0x1706, and, once written, will be decremented by one every 64 (decimal) clock cycles. If the count is back to zero, reading address 0x1707 will result in a byte with a '1' on location 7, and if the count is not zero, then reading 0x1707 will result in a value of zero (i.e. all 8 bits to zero). 
 
-Every count back from 9C back to zero therefore requires 64 * 0x9C or 9984 clock cycles, of 1 microsecond each, or just under 10 ms in total. Doing this 100 times totals 0.9984 second. Close enough. (If I would use 0x9D in stead I would overshoot, totaling 1.048 seconds; 0x9C is the closest you can get to 1 second therefore, at least in this simple way, and it is certainly close enough for my current purpose)
+Every count back from 9C back to zero therefore requires 64 * 0x9C or 9984 (decimal) clock cycles, of 1 microsecond each, or just under 10 ms in total. Doing this 100 times totals 0.9984 second. Close enough. (If I would use 0x9D in stead I would overshoot, totaling 1.048 seconds; 0x9C is the closest you can get to 1 second therefore, at least in this simple way, and it is certainly close enough for my current purpose)
 
 Unfortunately, the expansion RIOT does not offer interrupt functions, which means that during the wait you can't do other stuff, but that's ok. The only important thing for this program is that the PAL-1 won't do anything useful for 1 second between the LED pattern changes. 
 
-I ended up implementing the wait function as a subroutine that would be called twice within the loop defined earlier. The subroutine initializes the timer by writing 0x9C to location 1706, initializes an extra counter to count to 100, and then starts reading location 1707. Once it counts back to zero, the timer is re-initialized, the extra counter is incremented by one, and this is done 100 (or 0x64) times. When the count to 100 is completed, the subroutine returns to the main program.
+I ended up implementing the wait function as a subroutine that would be called twice within the loop defined earlier. The subroutine initializes the timer by writing 0x9C to location 0x1706, initializes an extra counter to count to 100, and then starts reading location 0x1707. Once it counts back to zero, the timer is re-initialized, the extra counter is incremented by one, and this is done 100 (or 0x64) times. When the count to 100 is completed, the subroutine returns to the main program.
 
 The final assembly code looks like this:
 
