@@ -89,7 +89,7 @@ Studying how the author created a timer taught me it involved writing a value to
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/RIOT/Timer2.png?raw=true" alt="fig1" style="width: 400px;"/>
 
-The interesting value here is 9C. That value is written to address 1706, and, once written, will be decremented by one every 64 clock cycles. If the count is back to zero, reading address 1707 will result in a byte with a '1' on location 7, and if the count is not zero, then reading 1707 will result in a zero. 
+The interesting value here is 9C. That value is written to address 1706, and, once written, will be decremented by one every 64 clock cycles. If the count is back to zero, reading address 1707 will result in a byte with a '1' on location 7, and if the count is not zero, then reading 1707 will result in a value of zero (i.e. all 8 bits to zero). 
 
 Every count back from 9C back to zero therefore requires 64 * 0x9C or 9984 clock cycles, of 1 microsecond each, or just under 10 ms in total. Doing this 100 times totals 0.9984 second. Close enough. (If I would use 0x9D in stead I would overshoot, totaling 1.048 seconds; 0x9C is the closest you can get to 1 second therefore, at least in this simple way, and it is certainly close enough for my current purpose)
 
@@ -134,7 +134,7 @@ clk:
   
 ```
 
-I compiled the code using [VASM](http://www.compilers.de/vasm.html). It is the compiler Ben Eater uses in his 6502 project. On the one hand it is fairly straighforward in its use - none of the linker stuff for instance sometimes found in some assemblers. Perfect for somebody like me who's not yet too versed in the ways of assembly programming. At the same time, VASM is very flexible and can for instance also work with Z80 assembly code, which makes it perfect for many of my projects. 
+I compiled the code using [VASM](http://www.compilers.de/vasm.html). It is the compiler Ben Eater uses in his 6502 project. On the one hand it is fairly straighforward in its use - none of the linker stuff for instance sometimes found in assemblers. Perfect for somebody like me who's not yet too versed in the ways of assembly programming. At the same time, VASM is very flexible and can for instance also work with Z80 assembly code, which makes it perfect for many of my projects. 
 
 Compiling was done to include the start address in the CBM 'PRG' format:
 ```
