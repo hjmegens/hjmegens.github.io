@@ -10,13 +10,13 @@ I recently got an interesting Z80 computer/trainer Single Board Computer: the Mu
 ## Micro-Professor MPF-1B
 
 
-I have a great fondness for the late-'70s and early '80s 8-bit-based Single Board Computers. There are a few reasons for that. One is that the minimalistic architecture that allows you to explore how the computer functions in every detail is one of them. While I also appreciate modern designs that follow the same principles, such as the [RC2014](https://z80kits.com), there is a certain element to the vintage architecture that isn't quite captured by these modern computers. 
+I have a great fondness for the late-'70s and early '80s 8-bit-based Single Board Computers. There are a few reasons for that. One is that the minimalistic architecture allows you to explore how the computer functions in every detail. While I also appreciate modern designs that follow the same principles, such as the [RC2014](https://z80kits.com), there is a certain element to the vintage architecture that isn't quite captured by these "modern" 8-bit computers. 
 
 And so, while I really love my RC2014 to explore the [Z80](https://en.wikipedia.org/wiki/Zilog_Z80) world, when I had the opportunity to buy a [Micro-Professor](https://en.wikipedia.org/wiki/Micro-Professor_MPF-I), or MPF-1, for a reasonable price, I jumped on it. If anything, the marketing of this cute SBC is unlike anything I've ever seen: a book-like cover that fits on your bookshelf. From the picture featuring on the box and manual it is clear that marketing was probably more oriented towards parents of kids, or other adults. 
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF/20211108_195213_.jpg?raw=true" alt="fig1" style="width: 500px;"/>
 
-Apart from the interesting packaging, it was also the [monitor program](https://en.wikipedia.org/wiki/Machine_code_monitor) that intrigued me. Monitors found in SBC such as the [KIM-1](https://en.wikipedia.org/wiki/KIM-1), [SDK-85](https://en.wikipedia.org/wiki/Intel_System_Development_Kit) and MPF are cleverly designed programs that gave a limited but essential set of functions to interact with the device. These functions included driving the LED display, scanning the minimal keyboard, often not much more than a hexpad, and usually at least one additional means of input, e.g. by audio transfer via the household taperecorder. Importantly, everything the monitor does revolves around addresses and machine code. You really have to learn the essentials of the computer to be able to work with it. These SBCs, sometimes called 'trainers' usually came with [excellent manuals](https://electrickery.hosting.philpem.me.uk/comp/mpf1/doc/MPF-1_usersManual.pdf) that allowed the novice to explore the 8-bit computer and the interfacing options in considerable depth. 
+Apart from the interesting packaging, it was also the [monitor program](https://en.wikipedia.org/wiki/Machine_code_monitor) that intrigued me. Monitors found in SBC such as the [KIM-1](https://en.wikipedia.org/wiki/KIM-1), [SDK-85](https://en.wikipedia.org/wiki/Intel_System_Development_Kit) and MPF are cleverly designed programs that gave a limited but essential set of functions to interact with the device. These functions included driving the LED display, scanning the minimal keyboard, often not much more than a hexpad, and usually at least one additional means of input, e.g. by audio transfer via the household taperecorder. Importantly, everything the monitor does revolves around addresses and machine code. You really have to learn the essentials of the computer to be able to work with it. These SBCs, sometimes called 'trainers', usually came with [excellent manuals](https://electrickery.hosting.philpem.me.uk/comp/mpf1/doc/MPF-1_usersManual.pdf) that allowed the novice to explore the 8-bit computer and the interfacing options in considerable depth. 
 
 The MPF was sent to me by the seller, and when I opened the box there was a very distinct air of mold coming out. Fortunately, the books that came with the MPF - a complete set of manuals and some other interesting booklets - turned out not to be affected by water damage. 
 
@@ -73,7 +73,7 @@ I read the ROM like this:
 
 ```
 
-sudo ../BE6502/minipro/minipro -p 'TMS2732A@DIP24' -r mpf-1b.bin
+sudo minipro -p 'TMS2732A@DIP24' -r mpf-1b.bin
 
 ```
 
