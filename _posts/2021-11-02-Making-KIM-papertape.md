@@ -105,4 +105,6 @@ Of course for those initiated in the KIM-verse the VUTAPE program will be known 
 
 The papertaper program can be found in my [PAL1_tools project](https://github.com/hjmegens/PAL1_tools) on Github. 
 
+#### addendum 
 
+There is a tool, `srec_cat`, that is much more versatile than my script in converting various binary and papertape formats. See [Github page of James McClanahan](https://github.com/w4jbm/PAL-1-6502-SBC) for details. James note the problem of the checksum of the last line not computed correctly in large papertape, something that I need to correct in my script too.  

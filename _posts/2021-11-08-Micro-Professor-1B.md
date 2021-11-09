@@ -57,7 +57,7 @@ I own two ROM programmers, the TL866 and the later TL866II+. These devices are d
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF/20210721_215835_.jpg?raw=true" alt="fig1" style="width: 400px;"/>
 
-But the TL866 and TL866II+ can not read the 25xx series of ROMs. It can read the 27xx series of ROMs though, which are very similar, apart from a few key differences. One of the differences is the that a few pins that have similar functions are in different positions, although 21 of 24 pins are in fact the same. To read the 2532 ROM, therefore, I could simply rewire three pins (and even get away with two if I wanted) to read it as if it were a 2732. 
+But the TL866 and TL866II+ can not read the 25xx series of ROMs. It can read the 27xx series of ROMs though, which are very similar, apart from a few key differences. One of the differences is the that a few pins that have similar functions are in different positions, although 21 of 24 pins are in fact the same. To read the 2532 ROM, therefore, I could simply rewire three pins to read it as if it were a 2732. 
 
 I found a [rewiring solution](https://www.sinclairzxworld.com/viewtopic.php?t=3281):
 
@@ -100,7 +100,7 @@ b593fd21dfa3455681e29da494821e72  mpf-1b.bin
 
 ```
 
-The ROM of my Micro-Professor therefore is the standard 4 KB monitor of the MPF-1B, as expected. Since I had a few 2532 ROMs lying around I tried to use my ROM programmer for programming in stead of reading the monitor software back on to one of those, using the same re-wiring contraption. But that didn't work out. These ROMs require 25V programming voltage, which the TL866 can't provide. The older TL866A maxes out at 21V, the newer TL866II+ at 18V. 
+The ROM of my Micro-Professor therefore is the standard 4 KB monitor of the MPF-1B, as expected. Since I had a few 2532 ROMs lying around I was tempted to use my ROM programmer for programming a spare 2532. [These TMS 2532 ROMs](https://www.tvsat.com.pl/pdf/t/tms2532_ti.pdf) require 25V programming voltage, which the TL866 can't provide. The older TL866A maxes out at 21V, the newer TL866II+ at 18V. I will need to get a different programmer to achieve that. 
 
 My joy of doing a quick and easy repair of my MPF was short-lived. After a few more hours working with the machine, it crashed, without any reason. As if to warn me it started beeping. It will reset alright, but after either a few minutes, or a few hours, will start getting fits. So, it is not happy. I've been investigating several leads and I will likely detail some of my findings in a later post. In fact I trained myself in using my new scope in the process. 
 
