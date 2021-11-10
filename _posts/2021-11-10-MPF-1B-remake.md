@@ -94,16 +94,15 @@ From what I could see, everything worked. There was however still the issue of t
 
 The configuration for that in the original MPF-1B is to cut a trace and set jumpers. However, Emilio already had changed the original design to anticipate either 6116 RAM or 2732 ROM, so the only trace I had to cut was the one between jumpers .. and .. , which is a default 'jumper closed' setting specific to this remake's design. The only other thing to do is to connect positions 2 and 3. 
 
-<img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/20211107_102500_.jpg?raw=true" alt="fig1" style="width: 300px;"/>
-<img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/20211107_102545_.jpg?raw=true" alt="fig1" style="width: 300px;"/>
-
-
+<img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/20211107_102500_.jpg?raw=true" alt="fig1" style="width: 250px;"/>
+<img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/20211107_102545_.jpg?raw=true" alt="fig1" style="width: 250px;"/>
 
 
 For the ROM I thought it would be nice to have two test programs that could provide some feedback from the LED display (the flashing 'HELP US' example and the noisy police siren from the User's Manual). I coded them so that they would be compiled as one binary. I aim to make a tool myself that can stitch binaries together with proper numbers of zeros inbetween. But that's for another day. Note that the ROM originates at location 0x2000 in the MPF memory space. 
 
 
 ```
+
   .org $2000         ; Flash 'HELP US'
   ld HL, blank       2000:  21 26 20
   push HL            2003:  E5
@@ -189,8 +188,9 @@ I plunked the ROM in the middle slot, put power to the MPF-1B remake, selected a
 
 So, now I can finish this board. I found a cute little 23 mm speaker that fits brilliantly, and, although only 0.5W is loud enough. Finally all components have come in. Including that second batch of 75491 and 75492 LED drivers. I've always found the LED displays of my original one very faint, but the remake wasn't that much brighter. However, when I replaced the driver ICs I got from the Croatian vendor for the Chinese one, the difference was quite dramatic. The displays were VERY much brighter. Actually, to the point that I'm not even sure if they work as intended because even when the displays are supposed to be 'off' there is a tiny bit of bleeding light. 
 
-<img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/20211107_102644_.jpg?raw=true" alt="fig1" style="width: 500px;"/>
-<img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/20211109_214818_.jpg?raw=true" alt="fig1" style="width: 500px;"/>
+<img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/20211107_102644_.jpg?raw=true" alt="fig1" style="width: 300px;"/>
+
+<img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/20211109_214818_.jpg?raw=true" alt="fig1" style="width: 600px;"/>
 
 
 From the figure above the careful observer may have spotted I've started fitting one audio connector. Actually I had fitted both, in a tentative fashion, to discover an issue when I started playing with the audio to transfer programs. But that is for another log. 
