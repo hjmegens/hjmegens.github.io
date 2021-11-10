@@ -4,7 +4,7 @@ title: Building an MPF-1B remake
 tags: [Micro-Professor, MPF-1B, Z80, SBC, ROM]
 ---
 
-Clones or remakes of historical computer designs offers ways to hack the old hardware without the risk of destroying an original machine. Here I detail the remake of a small single-board Z80 computer, the Micro-Professor 1B. I own an original, but nevertheless decided to build a remake. 
+Clones or remakes of historical computer designs offers ways to hack the old hardware without the risk of destroying an original machine. Here I detail the remake of a small single-board Z80 computer, the Micro-Professor 1B. 
 
 ## Recreating a Micro-Professor
 
