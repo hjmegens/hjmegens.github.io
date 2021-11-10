@@ -195,6 +195,6 @@ So, now I can finish this board. I found a cute little 23 mm speaker that fits b
 
 From the figure above the careful observer may have spotted I've started fitting one audio connector. Actually I had fitted both, in a tentative fashion, to discover an issue when I started playing with the audio to transfer programs. But that is for another log. 
 
-<img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/20211107_101311_.jpg?raw=true" alt="fig1" style="width: 500px;"/>
+<img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/20211107_101311_.jpg?raw=true" alt="fig1" style="width: 600px;"/>
 
 I'm looking forward to make a second MPF-1B remake, I have enough parts left, although for sure I'm going to buy some quality IC sockets first. But I want to get a bit more experience with the first one before deciding on a specific configuration for a second. That includes the keyboard. Although the remake's keyboard is surprisingly usable, it may be possible to make it look a bit more like the original. 
