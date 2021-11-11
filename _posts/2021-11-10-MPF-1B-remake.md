@@ -105,7 +105,7 @@ For the ROM I thought it would be nice to have two test programs that could prov
 ```
 
   .org $2000         ; Flash 'HELP US'
-  ld HL, blank       2000:  21 26 20
+  ld HL,blank       2000:  21 26 20
   push HL            2003:  E5
   ld IX,help         2004:  DD 21 20 20
 loop:
@@ -155,7 +155,7 @@ I've really come to appreciate [VASM](http://www.compilers.de/vasm.html) as comp
 
 ```
 
-VASM/vbcc/bin/vasmz80_oldstyle -Fbin -dotdir helpus.s -o helpus_police_siren.bin -L helpus_police_siren.lst
+VASM/vbcc/bin/vasmz80_oldstyle -Fbin -dotdir helpus_police_siren.s -o helpus_police_siren.bin -L helpus_police_siren.lst
 
 ```
 
@@ -187,7 +187,7 @@ sudo minipro -p "NMC27C32BQ@DIP24" -w helpus_police_siren.bin
 
 ```
 
-I plunked the ROM in the middle slot, put power to the MPF-1B remake, selected address 0x2000 and pressed 'Go', and it worked, a blinking 'HELP US' on the display. Selecting 0x2050 and hitting 'Go' the little machine would do it's police siren routine. The middle slot seemed configured properly therefore. 
+I plunked the ROM in the middle slot, put power to the MPF-1B remake, selected address 0x2000 and pressed 'Go', and it worked, a blinking 'HELP US' on the display. Selecting 0x2050 and hitting 'Go' the little machine would do it's police siren routine. The middle slot seemed configured properly. 
 
 So, now I can finish this board. I found a cute little 23 mm speaker that fits brilliantly, and, although only 0.5W is loud enough. Finally all components have come in. Including that second batch of 75491 and 75492 LED drivers. I've always found the LED displays of my original one very faint, but the remake wasn't that much brighter. However, when I replaced the driver ICs I got from the Croatian vendor for the Chinese one, the difference was quite dramatic. The displays were VERY much brighter. Actually, to the point that I'm not even sure if they work as intended because even when the displays are supposed to be 'off' there is a tiny bit of bleeding light. 
 
