@@ -4,7 +4,7 @@ title: Building an MPF-1B remake
 tags: [Micro-Professor, MPF-1B, Z80, SBC, ROM]
 ---
 
-Clones or remakes of historical computer designs offers ways to hack the old hardware without the risk of destroying an original machine. Here I detail the remake of a small single-board Z80 computer, the Micro-Professor 1B. 
+Clones or remakes of historical computer designs offer ways to hack the old hardware without the risk of destroying an original machine. Here I detail the remake of a small single-board Z80 computer, the Micro-Professor 1B. 
 
 ## Recreating a Micro-Professor
 
@@ -12,13 +12,13 @@ In a [previous post](https://hjmegens.github.io/2021-11-08-Micro-Professor-1B/) 
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/20211020_20114_.jpg?raw=true" alt="fig1" style="width: 300px;"/>
 
-Could this be a problem? One limiting issue is that I don't have anything to compare to. (spoiler alert: with the remake done I now know that sharkfins are a normal feature for the MPF-1) 
+Could this be a problem? One serious limitation is that I don't have anything to compare to. (spoiler alert: with the remake done I now know that sharkfins are a normal feature for the MPF-1) 
 
 For sure my original MPF-1B can be repaired - this particular design is simple, and all components that can fail can be easily replaced. The big chips are socketed, the smaller ones can be amputated, pins desolderd, and new sockets installed. And, of course, caps, diodes, resistors all can be desoldered and replaced. So, why don't I do that? Because that essentially means that my historic SBC would become a modern remake. A targeted repair is fine, but I just don't like blanket replacements of components in historical machines. 
 
 But wait - if all components can be replaced, you *could* make a completely new MPF-1B, right? And that is true. However, you would need a circuit board of course. Which, theoretically I could design, because all the necessary information is available. But that, for now, is beyond me. Designing PCBs is high on my list of future projects, but I want to start with something a bit more doable. 
 
-Doing clones and remakes has one additional advantage - building something yourself really is a great way to dive further into the details of a design. This is one thing I learned from the [Outstanding PAL-1](https://www.tindie.com/products/tkoak/pal-1-a-mos-6502-powered-computer-kit/), KIM-1 clone, potentially better than the real thing.
+Doing clones and remakes has one additional advantage - building something yourself really is a great way to dive further into the details of a design. This is one thing I learned from the [Outstanding PAL-1](https://www.tindie.com/products/tkoak/pal-1-a-mos-6502-powered-computer-kit/), a KIM-1 clone, which potentially may be better than the real thing (I wouldn't know because I don't own an original one).
 
 Fortunately, [Ruud Baltissen](http://www.baltissen.org/newhtm/myself.htm) pointed me towards [a site, in Portuguese](https://ekaww4.wixsite.com/tecnologia/projeto-cedm-80), from a Brazilian enthusiast who had recreated several historic SBCs, including the MPF.
 
@@ -26,9 +26,9 @@ Interestingly, the MPF-1 is called CEDM-80 in Portuguese. The project looked bri
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/20211107_101311pcb_.jpg?raw=true" alt="fig1" style="width: 400px;"/>
 
-Emilio also sent me a BOM, so I could already start ordering parts in the mean time. Interestingly, there aren't any really 'difficult' parts there. Most of it can be really easily ordered from eBay or Aliexpress. That includes the 6116 RAM, Z80 CPU, PIO and CTC. One thing I have decided not to save money on anymore though are caps. After ordering many batches of cheap caps that all are significantly out of spec I decided it's not worth the trouble and ordered some good quality caps from Mouser. I wish I had done the same for the IC sockets.
+Emilio also sent me a BOM, so I could already start ordering parts in the mean time. Interestingly, there aren't any really 'difficult' parts there. Most of it can be really easily ordered from eBay or Aliexpress. That includes the 6116 RAM, Z80 CPU, PIO and CTC. One thing I have decided not to save money on anymore, though, are caps. After ordering many batches of cheap caps that all are significantly out of spec I decided it's not worth the trouble and ordered some good quality caps from Mouser. I wish I had done the same for the IC sockets.
 
-There are three ICs that require some thought. The first two are the drivers for the LED displays. These are the 75491 and 75492. Looking around for these on eBay and elsewhere it became clear these could potentially be the most expensive parts of the whole board! I managed to find a seller in Croatia that had some for a reasonable price. But then Emilio very helpfully pointed out where he got his from AliXpress, for even less. I ended up buying two batches and perhaps that may have been a good thing, but more on that later.
+There are three ICs that require some attention though. The first two are the drivers for the LED displays. These are the 75491 and 75492. Looking around for these on eBay and elsewhere it became clear these display driver chips could potentially be the most expensive parts of the whole board! I managed to find a seller in Croatia that had some for a reasonable price. But then Emilio very helpfully pointed out where he got his from AliXpress, for even less. I ended up buying two batches and perhaps that may have been a good thing, but more on that later.
 
 ####  MPF-1 remake
 
@@ -56,24 +56,25 @@ There are three ICs that require some thought. The first two are the drivers for
 | 20 | C7 | 470pF | 1 ||||||
 | 21 | C1-5/8/10 | 104 (0,1uF) | 7 |||||||
 
-The third chip that was something to think about was the ROM. The original MPF-1B makes use of the 2532. I have a few of these lying around, so I wouldn't need to buy any. But I haven't found a modern programmer that can program the 2532. The biggest problem is that programming requires 25V. Using the 2532 in a MPF-1B remake would therefore be very impractical. In the MPF-1 there is a set of jumpers you can set though to switch between ROM types, so you can use another ROM, the 2732. That does, however, involve cutting some traces too. Emilio, for his design, had already taken care of all this - his MPF-1 recreation uses the 2732 as standard! Brilliant! Although I have a few of the 2732 lying around, I still decided in the end to buy a bunch. The reason is that the 2732 I owned can only be programmed at 21V. I have an older verions of the TL866 programmer, the TL866A, that can do it, but my more recent TL866II+ can't. The [NMC27C32BQ](https://pdf1.alldatasheet.com/datasheet-pdf/view/85625/NSC/NMC27C32BQ.html) is a 2732 version that is still widely available while being programmable at a much lower voltage (12.5V). Having this type of 2732 as the basis for my project should make me less relying on ROM programmers that are difficult to find (the TL866A no longer being manufactured).
+The third chip that required some consideration was the ROM. The original MPF-1B makes use of the 2532. I have a few of these lying around, so I wouldn't need to buy any. But I haven't found a modern programmer that can program the 2532. The biggest problem is that programming requires 25V. Using the 2532 in a MPF-1B remake would therefore be very impractical. In the MPF-1 there is a set of jumpers you can set though to switch between ROM types, so you can use another ROM, the 2732. That does, however, involve cutting some traces. In the design of the remake Emilio had already taken care of all this - the MPF-1 recreation uses the 2732 as standard! Brilliant! Although I have a few of the 2732 lying around, I still decided in the end to buy some. The reason is that the 2732 I owned can only be programmed at 21V. I have an older verions of the TL866 programmer, the TL866A, that can do it, but my more recent TL866II+ can't. The [NMC27C32BQ](https://pdf1.alldatasheet.com/datasheet-pdf/view/85625/NSC/NMC27C32BQ.html) is a 2732 version that is still widely available, while being programmed at a much lower voltage (12.5V). Having this type of 2732 as the basis for my project should make me less relying on ROM programmers that are difficult to find (the TL866A no longer being manufactured).
 
 As the PCBs and components started to come in, the moment to start building came near. There were still a few components on their way, such as for instance the audio connectors, but everything that was essential for basic operation was there.
 
-One of the nice features of not having any build instructions is that you really have to pay attention to the schematics. What goes where? And why? This really makes you wonder about how parts of the circuit really work. For instance, the CPU clock is running at bout 1.79 Mhz, but the crystal is just under 3.58 Mhz - how is the frequency halved, and why? I decided to replicate the clock circuitry on a breadboard to find out (more details in a later post, maybe). As a bonus, the breadboarded circuit provided a nice tester for the crystal before soldering that in. 
+One of the nice features of not having any build instructions is that you really have to pay attention to the schematics. What goes where? And why? This really makes you wonder how different parts of the MPF-1B work. For instance, the CPU clock is running at bout 1.79 Mhz, but the crystal is just under 3.58 Mhz - how is the frequency halved, and why? I decided to replicate the clock circuitry on a breadboard to find out (more details in a later post, maybe). As a bonus, the breadboarded circuit provided a nice tester for the crystal before soldering that in. 
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/20210926_134207_.jpg?raw=true" alt="fig1" style="width: 300px;"/>
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/clock_mpf.png?raw=true" alt="fig1" style="width: 300px;"/>
 
-I also wasn't completely sure whether the LED displays would work - Emilio had recommended a certain LED display but they hadn't come in yet. I had a few common cathode displays lying around but were they the right type? I also was wondering about the values of some of the resistor arrays - investigating my ailing MPF-1B I noted some pretty sharkfins on the scope, which likely resulted from fairly high pullup resistor values. Could be interesting to play with these values? So, apart from the ICs I also socketed the displays, resistor arrays, and even the transistors. I'm planning on making maybe one or two more - I got the minimum number of boards per order, which is 5. So, the first build could also be used as a sort of an experiment. 
+I also wasn't completely sure whether the LED displays would work - Emilio had recommended a certain LED display but they hadn't come in yet. I had a few common cathode displays lying around but were they the right type? I also was considering the values of some of the resistor arrays - investigating my ailing MPF-1B I noted some pretty sharkfins on the scope, which likely resulted from fairly high pullup resistor values. Could be interesting to play with these values? So, apart from the ICs I also socketed the displays, resistor arrays, and even the transistors. This first build therefore allows for some experimentation before I build another one. 
 
-I soldered everything together, which was quite a bit of work, one evening and one morning. I'm not that fast and I check every component as much as I can e.g. with a component tester for resistors, caps, LEDs, diodes, and transistors. The smaller ICs and 6116 RAM were tested with my [ Awesome Chiptester Pro](https://8bit-museum.de/sonstiges/hardware-projekte/hardware-projekte-chip-tester-english/). And the CPU was tested in a minimal RC2014 setup. I also tested all keyboard buttons, all 36, before soldering. 
+Assembling the board was quite a bit of work, one evening and one morning. I'm not that fast and I check every component as much as I can e.g. with a component tester for resistors, caps, LEDs, diodes, and transistors. The smaller ICs and 6116 RAM were tested with my [ Awesome Chiptester Pro](https://8bit-museum.de/sonstiges/hardware-projekte/hardware-projekte-chip-tester-english/). And the CPU was tested in a minimal RC2014 setup. I also tested all keyboard buttons, all 36, before soldering. 
 
 Assembly went well, but there were few small hickups. The only one to note, though, is that in retrospect I should have chosen better quality sockets for the larger ICs. After soldering the sockets in, it already was apparent that the individual metal sockets were not all level. I should have paid better attention, but this has never occured to me before. The sockets used for this project certainly were the cheap kind. At one point I wanted to replace the CPU, tried to pull it out but one of the legs wat really stuck in the socket. In trying to get it unstuck I accidentally broke of the leg of the CPU. Doh! The price of going cheap.
 
 A few other components had not arrived yet - the audio sockets and the speaker. The speaker is important because the MPF likes to talk to you. Beeps of 1000 and 2000 hz is how it speaks. I cannibalized an other project for a speaker that was too big but would do for now, while waiting for my teensy 23mm wide speakers to arrive from China. The audio sockets on the other hand could wait.
 
-And the build was completed! Now all I needed to do was prepare the ROM. 
+And the build was completed! Now all I needed to do was prepare the ROM. I programmed it with the monitor binary I created in [the previous post](https://hjmegens.github.io/2021-11-08-Micro-Professor-1B/).
+
 
 ```
 
@@ -81,18 +82,18 @@ sudo minipro -p "NMC27C32BQ@DIP24" -w monitor_and_tiny_basic.u6.bin
 
 ```
 
-And stick it in the leftmost memory socket. Would it work? ..... I connected a 9V power supply and .... TADAAAA! it worked!
+And then stuck it in the leftmost memory socket. Would it work? ..... I connected a 9V power supply and .... TADAAAA! it worked!
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/20211019_132711_.jpg?raw=true" alt="fig1" style="width: 500px;"/>
 
 
-I started punching in a few simple examples from the User's Manual, including the HELP US blink example and the alsways fun police siren. With the latter, it became quite apparent that sound did work but... it was really very muted. It turned out that for R9 I had used a 1K resistor. The PCB notes '680' for that resistor, and I thought that 1K should be fine too. However, after a bit of further research it became apparent that in the MPF the resistor value is rather 68 Ohm. I replaced the 1K resistor with one of value 100 Ohm, and then the speaker was blaring really nice and loud. 
+I started punching in a few simple examples from the [User's Manual](https://electrickery.nl/comp/mpf1/doc/MPF-1_usersManual.pdf), including the HELP US blink example and the alsways fun police siren. With the latter, it became quite apparent that sound did work but... it was really very muted. It turned out that for R9 I had used a 1K resistor. The PCB notes '680' for that resistor, and I thought that 1K should be fine too. However, after a bit of further research it became apparent that in the MPF the resistor value is rather 68 Ohm. I replaced the 1K resistor with one of value 100 Ohm, and then the speaker was blaring really nice and loud. 
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/20211019_132809_.jpg?raw=true" alt="fig1" style="width: 500px;"/>
 
 From what I could see, everything worked. There was however still the issue of the unpopulated middle memory chip location, which can either hold a 6116 RAM chip, thereby increasing total RAM from 2 to 4 KB, or another ROM, which, in the original MPF-1B can be either of the 2532 or 2732 type. 
 
-The configuration for that in the original MPF-1B is to cut a trace and set jumpers. However, Emilio already had changed the original design to anticipate either 6116 RAM or 2732 ROM, so the only trace I had to cut was the one between jumpers .. and .. , which is a default 'jumper closed' setting specific to this remake's design. The only other thing to do is to connect positions 2 and 3. 
+The configuration for that in the original MPF-1B is to cut a trace and set jumpers. However, Emilio already had changed the original design to anticipate either 6116 RAM or 2732 ROM, so the only trace I had to cut was the one between jumpers 1 and 2 , which is a default 'jumper closed' setting specific to this remake's design. The only other thing to do is to connect positions 2 and 3. 
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/20211107_102500_.jpg?raw=true" alt="fig1" style="width: 250px;"/>
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/20211107_102545_.jpg?raw=true" alt="fig1" style="width: 250px;"/>
@@ -148,7 +149,9 @@ TONE .equ $05E4
   end
 
 ```
-I've really come to appreciate VASM as compiler of choice for my 8-bit projects. I had previously used it for my Bean Eater and PAL-1 projects. When I was searching for a Z80 assembly code compiler I discovered I was already using one: VASM. 
+
+I've really come to appreciate [VASM](http://www.compilers.de/vasm.html) as compiler of choice for my 8-bit projects. I had previously used it for my [Bean Eater](https://eater.net/6502) and [PAL-1 projects](https://hjmegens.github.io/2021-11-06-The-PAL1-RIOT-expansion/). When I was searching for a Z80 assembly code compiler I discovered I was already using one: VASM. 
+
 
 ```
 
@@ -176,7 +179,7 @@ hjm@XPS:example_code$ hexdump -C helpus_police_siren.bin
 
 ```
 
-Subsequently, I programmed the 2732 ROM:
+Subsequently, I programmed the second 2732 ROM:
 
 ```
 
@@ -197,4 +200,6 @@ From the figure above the careful observer may have spotted I've started fitting
 
 <img src="https://github.com/hjmegens/hjmegens.github.io/blob/master/_posts/figures/MPF_remake/20211107_101311_.jpg?raw=true" alt="fig1" style="width: 600px;"/>
 
-I'm looking forward to make a second MPF-1B remake, I have enough parts left, although for sure I'm going to buy some quality IC sockets first. But I want to get a bit more experience with the first one before deciding on a specific configuration for a second. That includes the keyboard. Although the remake's keyboard is surprisingly usable, it may be possible to make it look a bit more like the original. 
+I'm looking forward to make a second MPF-1B remake. The minimum order is 5 boards, and I have enough parts left for at least one more. I will for sure buy some quality IC sockets first though. But I want to experiment with the first one before deciding on a specific configuration for a second. That includes the keyboard. Although the remake's keyboard is surprisingly usable, it may be possible to make it look a bit more like the original. 
+
+For now I'm superhappy with this board, because it immediately set me on a path of hacking it. Perfect: this is precisely what these boards were designed for, over 40 years ago. And now I can do that without risking destroying my original. 
