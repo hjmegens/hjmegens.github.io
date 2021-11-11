@@ -30,7 +30,7 @@ Emilio also sent me a BOM, so I could already start ordering parts in the mean t
 
 There are three ICs that require some attention though. The first two are the drivers for the LED displays. These are the 75491 and 75492. Looking around for these on eBay and elsewhere it became clear these display driver chips could potentially be the most expensive parts of the whole board! I managed to find a seller in Croatia that had some for a reasonable price. But then Emilio very helpfully pointed out where he got his from AliXpress, for even less. I ended up buying two batches and perhaps that may have been a good thing, but more on that later.
 
-####  MPF-1 remake
+####  MPF-1 remake: components
 
 | ITEM   |    ID     |     DESCRIPTION     | QTY || ITEM   |    ID     |     DESCRIPTION     | QTY |
 |---------|:----------|:---------------------|-----||---------|:----------|:---------------------|-----|
